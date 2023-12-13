@@ -24,7 +24,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: "https://skill-quake.vercel.app/",
+    origin: "https://skill-quake.vercel.app",
     credentials: true,
   })
 );
