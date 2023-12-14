@@ -30,7 +30,8 @@ exports.resetPasswordToken = async (req, res) => {
     );
     //create url
     const port = process.env.PORT || 5000;
-    const url = `http://localhost:${port}/resetPassword/${token}`;
+    // const url = `http://localhost:${port}/resetPassword/${token}`;
+    const url = `https://skill-quake.vercel.app/resetPassword/${token}`;
     //send email containing url
     const message = `Please click on the link below to reset your password:\n${url}`;
     await mailSender(updateUser.email, "Password Reset Link", message);
